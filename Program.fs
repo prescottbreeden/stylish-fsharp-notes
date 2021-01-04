@@ -31,4 +31,13 @@ let main argv =
     let circle = Shapes.Circle(3.14)
     printfn "%s" (Shapes.describe circle)
 
+    let herMiddleName = Some "Ada"
+    let myMiddleName = None
+    let displayMiddleName (name: string option) =
+        match name with
+        | Some s -> s
+        | None -> ""
+
+    printfn ">>>%s<<<" (displayMiddleName myMiddleName)
+    printfn ">>>%s<<<" (displayMiddleName herMiddleName)
     0 // return an integer exit code
